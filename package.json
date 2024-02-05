@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
     "build": "webpack --config webpack.config.js",
     "start": "webpack-dev-server --mode development --hot --open"
   },

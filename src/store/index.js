@@ -6,6 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    mainLink: "https://220.transflow.ru/api/public/v1/routes_data?key=012345678abc",
     picked: 'Routes',
     columnDefs: null,
     rowData: null,
@@ -101,7 +102,7 @@ export default new Vuex.Store({
     },
     fetchData({ commit }) {
 
-      axios.get("https://220.transflow.ru/api/public/v1/routes_data?key=012345678abc", {
+      axios.get(this.state.mainLink, {
       })
       .then(function (response) {
         commit('setData', response.data)
